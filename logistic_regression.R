@@ -3,7 +3,7 @@ library(caret)
 set.seed(42)
 data(mtcars)
 
-split=createDataPartition(biopsy$class,times=1,p=0.70,list=FALSE)
+split=createDataPartition(mtcars$vs,times=1,p=0.70,list=FALSE)
 test_set=data.frame(mtcars[-split,c('hp','vs')])
 test=data.frame(hp=seq(min(mtcars$hp),max(mtcars$hp),len=100))
 
