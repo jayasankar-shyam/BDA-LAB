@@ -1,9 +1,9 @@
 library(MASS)
 library(caret)
-set.seed(42)
+set.seed(7)
 data(mtcars)
 
-split=createDataPartition(mtcars$vs,times=1,p=0.70,list=FALSE)
+split=createDataPartition(mtcars$vs,times=1,p=0.60,list=FALSE)
 test_set=data.frame(mtcars[-split,c('hp','vs')])
 test=data.frame(hp=seq(min(mtcars$hp),max(mtcars$hp),len=100))
 
