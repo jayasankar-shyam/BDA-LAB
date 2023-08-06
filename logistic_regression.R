@@ -21,3 +21,9 @@ cat("Accuracy = ",cm$overall[1])
 
 plot(vs~hp,data=mtcars,col='red',cex=1.3,pch=16)
 lines(vs~hp,data=test,col='green',lwd=2)
+############### OR  ################
+#ggplot(mtcars,aes(x=hp,y=vs))+
+#  geom_point(color="red",size=3)+
+#  geom_line(data=test,aes(y=vs),color='green',size=1.2)+
+#  labs(x = "hp", y = "vs")+
+#  theme_minimal()
